@@ -10,9 +10,9 @@ find_package(LAPACK REQUIRED)
 find_package(GTest REQUIRED)
 
 set(link_lib glog::glog GTest::gtest)
-if(!WIN32)
-    set(link_lib "${link_lib} pthread")
-endif()
+#if(!WIN32)
+#    set(link_lib "${link_lib} pthread")
+#endif()
 set(link_math_lib  ${ARMADILLO_LIBRARIES} ${BLAS_LIBRARIES} ${LAPACK_LIBRARIES})
 aux_source_directory(./test DIR_TEST_ARMA)
 
